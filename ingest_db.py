@@ -4,6 +4,10 @@ from openai import AzureOpenAI
 import faiss 
 import numpy as np
 import pickle
+import os
+
+EMBED_KEY = os.getenv("AZURE_OPENAI_EMBED_API_KEY")
+EMBED_ENDPOINT = os.getenv("AZURE_OPENAI_EMBED_ENDPOINT") 
 
 with open('knowledge_base_rag.json', 'r', encoding='utf8') as f:
     raw_data = json.load(f) 
@@ -11,8 +15,8 @@ with open('knowledge_base_rag.json', 'r', encoding='utf8') as f:
 documents = [entry["content"] for entry in raw_data] 
 
 client = AzureOpenAI(
-    azure_endpoint="https://openai-emb-chbt.openai.azure.com/",
-    api_key="2QmwUXQgrBHG473QojgKcopfhVxUArSdQ5kqNxaD2W3JBjxIsKxcJQQJ99BGACfhMk5XJ3w3AAABACOGWheg",
+    azure_endpoint=EMBED_ENDPOINT,
+    api_key=EMBED_KEY,
     api_version="2023-05-15"  
 ) 
 
