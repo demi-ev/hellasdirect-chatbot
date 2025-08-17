@@ -41,4 +41,5 @@ Running locally via Python:
 ## Example Use on Streamlit
 
 
-![Example UI](https://freeimage.host/i/Fm785AB)
+![Example UI](https://freeimage.host/i/Fm785AB](https://ibb.co/4nBscbL7)
+
