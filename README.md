@@ -7,10 +7,10 @@ The chatbot should be able to recognize if there is a case of road assistance or
 
 ## Overview of the architecture
 
-Used an Azure OpenAI GPT deployment for the chatbot's responses
-Used an Azure OpenAI embeddings deployment + a .json file of mock client/human agent calls for RAG
-Used FAISS to create a vector database for retrieval
-Implemented a simple frontend component with Streamlit
+- Used an Azure OpenAI GPT deployment for the chatbot's responses
+- Used an Azure OpenAI embeddings deployment + a .json file of mock client/human agent calls for RAG
+- Used FAISS to create a vector database for retrieval
+- Implemented a simple frontend component with Streamlit
 
 ## Requirements
 
@@ -40,4 +40,5 @@ Running locally via Python:
 
 ## Example Use on Streamlit
 
-![Example UI](https://cdn.discordapp.com/attachments/1052324563406573598/1405841805529972856/image.png?ex=68a04bb5&is=689efa35&hm=e41807306bad293f1042ec241eae4f7ca3128bc7645469a8adfcd45b02a8d44c) 
+
+![Example UI](https://freeimage.host/i/Fm785AB)
