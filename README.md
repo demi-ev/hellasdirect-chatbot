@@ -41,6 +41,7 @@ Running locally via Python:
 ## Example Use on Streamlit
 
 
-![Example UI](https://ibb.co/4nBscbL7)
+![Example UI](assets/chbt-display.png)
+
 
 
