@@ -43,5 +43,12 @@ Running locally via Python:
 
 ![Example UI](assets/chbt-display.png)
 
+## Limitations
+
+- There is an issue with the variable 'AZURE_OPENAI_EMBED_DEPLOYMENT', and thus the model variable has to be replaced manually. This corresponds to "chbt-embedding" in the present code.
+- The chatbot was created mostly for practice purposes, and so there is ample room for improvement as to how it handles edge cases and complex queries.
+- No significant evaluation was conducted, although this is a priority for future improvements.
+
+
 
 
