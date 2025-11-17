@@ -8,6 +8,7 @@ import os
 
 EMBED_KEY = os.getenv("AZURE_OPENAI_EMBED_API_KEY")
 EMBED_ENDPOINT = os.getenv("AZURE_OPENAI_EMBED_ENDPOINT") 
+EMBED_DEPLOYMENT = os.getenv("AZURE_OPENAI_EMBED_DEPLOYMENT")
 
 with open('knowledge_base_rag.json', 'r', encoding='utf8') as f:
     raw_data = json.load(f) 
@@ -24,7 +25,7 @@ embeddings = [] #turn docs into vectors (embeddings)
 for text in documents:
     response = client.embeddings.create( 
         input=text,
-        model="chbt-embedding"
+        model=EMBED_DEPLOYMENT
     )
     embeddings.append(response.data[0].embedding) 
 
@@ -35,3 +36,4 @@ index.add(np.array(embeddings).astype("float32")) #add doc embeddings to FAISS i
 faiss.write_index(index, 'hellasdirect_index.faiss') #save index
 with open('documents.pkl', 'wb') as f: #save docs
     pickle.dump(documents, f) 
+
