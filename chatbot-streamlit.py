@@ -18,7 +18,8 @@ GPT_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT")
 
 #Embeddings model
 EMBED_KEY = os.getenv("AZURE_OPENAI_EMBED_API_KEY")
-EMBED_ENDPOINT = os.getenv("AZURE_OPENAI_EMBED_ENDPOINT") 
+EMBED_ENDPOINT = os.getenv("AZURE_OPENAI_EMBED_ENDPOINT")
+EMBED_DEPLOYMENT = os.getenv("AZURE_OPENAI_EMBED_DEPLOYMENT")
 
 
 #load index and documents for RAG
@@ -53,7 +54,7 @@ if user_input:
     st.write(f"Εσείς: {user_input}") 
     embedding = emb_client.embeddings.create(
     input=user_input,
-    model="chbt-embedding"   
+    model=EMBED_DEPLOYMENT   
     ).data[0].embedding 
 
     D, I = index.search(np.array([embedding]).astype("float32"), k=3) 
@@ -92,3 +93,4 @@ if user_input:
             print("Η περίληψη της υπόθεσης αποθηκεύτηκε.")
         except json.JSONDecodeError:
             print("Σφάλμα: δεν έγινε αποθήκευση.") 
+
