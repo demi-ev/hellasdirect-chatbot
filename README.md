@@ -36,7 +36,7 @@ Running locally via Python:
 - clone the repo
 - pip install -r requirements.txt
 - create .env file with Azure info
-- streamlit run chatbot-streamlit.py 
+- streamlit run app/main.py 
 
 ## Example Use on Streamlit
 
