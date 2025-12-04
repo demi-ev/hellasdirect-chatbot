@@ -10,7 +10,7 @@ EMBED_KEY = os.getenv("AZURE_OPENAI_EMBED_API_KEY")
 EMBED_ENDPOINT = os.getenv("AZURE_OPENAI_EMBED_ENDPOINT") 
 EMBED_DEPLOYMENT = os.getenv("AZURE_OPENAI_EMBED_DEPLOYMENT")
 
-with open('knowledge_base_rag.json', 'r', encoding='utf8') as f:
+with open('data/knowledge_base_rag.json', 'r', encoding='utf8') as f:
     raw_data = json.load(f) 
 
 documents = [entry["content"] for entry in raw_data] 
